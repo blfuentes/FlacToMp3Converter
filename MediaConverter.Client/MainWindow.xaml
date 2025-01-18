@@ -1,0 +1,73 @@
+﻿<Window x:Class="MediaConverter.Client.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MediaConverter.Client"
+        mc:Ignorable="d"
+        Title="Media Converter" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <!-- Elegir carpeta con música -->
+        <StackPanel Grid.Row="0" Grid.ColumnSpan="3" Orientation="Horizontal" Background="LightGray">
+            <Button Content="Elegir carpeta con música" 
+                    Width="260" Margin="5" FontSize="20" FontWeight="Bold" Background="Wheat"
+                    Click="ChooseFolder_Click" />
+            <StackPanel Orientation="Vertical">
+                <Label x:Name="lblOriginFolder" Content="Carpeta con música:" Margin="5" FontSize="20" FontWeight="Bold" />
+                <Label x:Name="lblOriginFolderName" Content="..." Margin="5" FontSize="10" FontWeight="Bold" />
+            </StackPanel>
+        </StackPanel>
+
+        <!-- Elegir carpeta destino -->
+        <StackPanel Grid.Row="1" Grid.ColumnSpan="3" Orientation="Horizontal" Background="LightGray">
+            <Button Content="¿Dónde guardar la música?" 
+                    Width="260" Margin="5" FontSize="20" FontWeight="Bold" Background="Wheat"
+                    Click="ChooseTargetFolder_Click" />
+            <StackPanel Orientation="Vertical">
+                <Label x:Name="lblTargetFolder" Content="Guardar en:" Margin="5" FontSize="20" FontWeight="Bold" />
+                <Label x:Name="lblTargetFolderName" Content="..." Margin="5" FontSize="10" FontWeight="Bold" />
+            </StackPanel>
+        </StackPanel>
+
+        <!-- Output -->
+
+        <ScrollViewer Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" Margin="5"
+              VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
+            <TextBox x:Name="txbOutput"
+                 TextWrapping="Wrap" FontSize="10"
+                 IsReadOnly="True" 
+                 VerticalScrollBarVisibility="Auto"
+                 Text="{Binding Output, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+        </ScrollViewer>
+
+        <!-- Comandos -->
+        <Label Name="lblStatus" FontSize="35" Margin="5"
+            Grid.Row="3" Grid.Column="0" Content="..." Background="LightGray" />
+        <Button Grid.Row="3" Grid.Column="1"
+                Content="PASAR A MP3" Margin="5"
+                FontSize="35" FontWeight="Bold"
+                Click="ConvertMusic_Click" />
+        <StackPanel Grid.Row="3" Grid.Column="2" Orientation="Vertical">
+            <CheckBox x:Name="chkDeleteOrigin" IsEnabled="False">
+                <TextBlock Text="Borrar originales al terminar"
+                           FontSize="15" Margin="0,-2,0,0"/>
+            </CheckBox>
+            <CheckBox x:Name="chkOpenTarget">
+                <TextBlock Text="Abrir carpeta al terminar"
+               FontSize="15" Margin="0,-2,0,0"/>
+            </CheckBox>
+        </StackPanel>
+    </Grid>
+</Window>

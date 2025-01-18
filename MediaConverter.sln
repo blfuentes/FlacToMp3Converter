@@ -5,6 +5,8 @@ VisualStudioVersion = 17.5.33424.131
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "MediaConverter", "MediaConverter.fsproj", "{886A34F1-D688-47B0-9F84-1E36F5804178}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediaConverter.Client", "MediaConverter.Client\MediaConverter.Client.csproj", "{9D9DD031-23EF-44A3-9DB2-BB5E6319EC1A}"
+EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution items", "Solution items", "{01B23807-DB04-4726-AFA9-3C37A834F3CD}"
 	ProjectSection(SolutionItems) = preProject
 		Directory.Packages.props = Directory.Packages.props
@@ -20,6 +22,10 @@ Global
 		{886A34F1-D688-47B0-9F84-1E36F5804178}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{886A34F1-D688-47B0-9F84-1E36F5804178}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{886A34F1-D688-47B0-9F84-1E36F5804178}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D9DD031-23EF-44A3-9DB2-BB5E6319EC1A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D9DD031-23EF-44A3-9DB2-BB5E6319EC1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D9DD031-23EF-44A3-9DB2-BB5E6319EC1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D9DD031-23EF-44A3-9DB2-BB5E6319EC1A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

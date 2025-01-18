@@ -2,7 +2,7 @@
   "profiles": {
     "MediaConverter": {
       "commandName": "Project",
-      "commandLineArgs": "-p \"C:\\ProgramData\\chocolatey\\lib\\ffmpeg-full\\tools\\ffmpeg\\bin\" -f \"D:\\Musica\" -o \"D:\\test\\output\" -i \"flac\" -c \"mp3\""
+      "commandLineArgs": "-p \"C:\\ProgramData\\chocolatey\\lib\\ffmpeg-full\\tools\\ffmpeg\\bin\" -f \"D:\\tmp\" -o \"D:\\test\\output\" -i \"opus\" -c \"mp3\""
     }
   }
 }
